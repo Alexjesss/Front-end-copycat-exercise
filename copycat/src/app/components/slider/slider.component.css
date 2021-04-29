@@ -1,0 +1,16 @@
+.carousel {
+  width: 100%;
+  display: flex;
+  z-index: 10;
+  margin-top: 74px;
+}
+
+.slick-item {
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.slick-item:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}

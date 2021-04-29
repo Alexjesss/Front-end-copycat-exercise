@@ -1,0 +1,78 @@
+<!-- header -->
+<div class="container">
+<div class="header">
+  <div class="header-banner">
+    <h2>{{nowPlaying?.results[6].title}}</h2>
+
+    <div class="hero-image-wrapper">
+      <img class="hero static-image image-layer"  src="https://www.themoviedb.org/t/p/original/hJuDvwzS0SPlsE6MNFOpznQltDZ.jpg" alt="">
+    </div>
+
+    <div class="banner-buttons">
+      <div class="buttons">
+        <button class="play">
+          <mat-icon class="arrow">arrow_right</mat-icon>
+          <span>Play</span></button>
+        <button class="info">
+          <img class="info-icon" src="assets/info.svg" alt="Logo">
+          <span>More Info</span></button>
+      </div>
+    </div>
+  </div>
+
+<div class="header-main" id="stickyHeader" #stickyHeader [class.sticky]="sticky">
+
+  <a routerLink="/">
+    <img class="logo" src="assets/netflix.svg" alt="Logo">
+  </a>
+  <div class="header-left">
+    <ul>
+      <li><a routerLink="/" class="links-left active">Home</a></li>
+      <li><a class="links-left" routerLink="/">Tv Shows</a></li>
+      <li><a class="links-left" routerLink="/">Movies</a></li>
+      <li><a class="links-left" routerLink="/">New & Popular</a></li>
+      <li><a class="links-left" routerLink="/">My List</a></li>
+      <li><a class="links-left" routerLink="/">Watch Again</a></li>
+    </ul>
+  </div>
+
+  <div class="header-right">
+    <ul>
+      <li><a class="links-right" href="">
+        <mat-icon>search</mat-icon>
+      </a></li>
+      <li><a class="links-right" href="">KIDS</a></li>
+      <li>
+        <div class="nav-button"><span class="gifts" data-tooltip="gifts-tooltip"><a data-uia="action-click-gift-box"
+                                                                                    class="gifts-menu"
+                                                                                    aria-haspopup="true"
+                                                                                    aria-label="Gifts" href="/"><svg
+          viewBox="0 0 20 21" role="img" aria-labelledby="gift-box" class="gifts-menu__icon"><defs><polygon id="path-1"
+                                                                                                            points="9.09090909e-05 0 19.3881818 0 19.3881818 20.0960909 9.09090909e-05 20.0960909"></polygon></defs><g
+          id="V1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Cell-4-2"
+                                                                                    transform="translate(-1083.000000, -24.000000)"><g
+          id="Group-3" transform="translate(1083.000000, 24.000000)"><mask id="mask-2" fill="white"><use
+          xlink:href="#path-1"></use></mask><g id="Clip-2"></g><path
+          d="M18.0246364,10.087 C18.0246364,10.1733636 17.9519091,10.2460909 17.8655455,10.2460909 L17.6782727,10.2460909 L16.3146364,10.2460909 L3.07372727,10.2460909 L1.71009091,10.2460909 L1.52281818,10.2460909 C1.43645455,10.2460909 1.36372727,10.1733636 1.36372727,10.087 L1.36372727,7.56518182 C1.36372727,7.47790909 1.43645455,7.40518182 1.52281818,7.40518182 L9.01190909,7.40518182 L14.601,7.40518182 L17.8655455,7.40518182 C17.9519091,7.40518182 18.0246364,7.47790909 18.0246364,7.56518182 L18.0246364,10.087 Z M16.3146364,18.6624545 C16.3146364,18.6988182 16.281,18.7324545 16.2446364,18.7324545 L10.3755455,18.7324545 L10.3755455,11.6097273 L16.3146364,11.6097273 L16.3146364,18.6624545 Z M9.01190909,18.7324545 L3.14372727,18.7324545 C3.10645455,18.7324545 3.07372727,18.6988182 3.07372727,18.6624545 L3.07372727,11.6097273 L9.01190909,11.6097273 L9.01190909,18.7324545 Z M6.711,1.36336364 C7.94918182,1.36336364 8.95554545,2.37063636 8.95554545,3.60790909 L8.95554545,5.85245455 L6.711,5.85245455 C5.47372727,5.85245455 4.46645455,4.84518182 4.46645455,3.60790909 C4.46645455,2.37063636 5.47372727,1.36336364 6.711,1.36336364 L6.711,1.36336364 Z M10.3755455,4.95790909 C10.3755455,3.86972727 11.261,2.98518182 12.3491818,2.98518182 C13.4382727,2.98518182 14.3228182,3.86972727 14.3228182,4.95790909 C14.3228182,5.36063636 14.1973636,5.73063636 13.9882727,6.04154545 L10.3755455,6.04154545 L10.3755455,4.95790909 Z M17.8655455,6.04154545 L15.4928182,6.04154545 C15.6128182,5.70154545 15.6864545,5.33972727 15.6864545,4.95790909 C15.6864545,3.11790909 14.1891818,1.62063636 12.3491818,1.62063636 C11.491,1.62063636 10.7155455,1.95609091 10.1237273,2.49063636 C9.65009091,1.04972727 8.30827273,-0.000272727273 6.711,-0.000272727273 C4.72190909,-0.000272727273 3.10281818,1.61881818 3.10281818,3.60790909 C3.10281818,4.55245455 3.47736364,5.40245455 4.07554545,6.04154545 L1.52281818,6.04154545 C0.682818182,6.04154545 9.09090909e-05,6.72518182 9.09090909e-05,7.56518182 L9.09090909e-05,10.087 C9.09090909e-05,10.927 0.682818182,11.6097273 1.52281818,11.6097273 L1.71009091,11.6097273 L1.71009091,18.6624545 C1.71009091,19.4533636 2.35281818,20.0960909 3.14372727,20.0960909 L16.2446364,20.0960909 C17.0355455,20.0960909 17.6782727,19.4533636 17.6782727,18.6624545 L17.6782727,11.6097273 L17.8655455,11.6097273 C18.7055455,11.6097273 19.3882727,10.927 19.3882727,10.087 L19.3882727,7.56518182 C19.3882727,6.72518182 18.7055455,6.04154545 17.8655455,6.04154545 L17.8655455,6.04154545 Z"
+          id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path></g></g></g></svg></a></span></div>
+      </li>
+      <li><a class="links-right" href="">
+        <mat-icon>notifications</mat-icon>
+      </a></li>
+      <li><img class="profile-icon"
+               src="https://occ-0-767-1335.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABWFXqf5VFEcSB7m5F_LyjAxU1t8F2Gll6R4qxPF8JL1ywNKbz38Z_bbyLqhgdtXP-iPIeCassIGbZgBHL6jyWgI.png?r=8ed"
+               alt=""></li>
+    </ul>
+  </div>
+
+</div>
+</div>
+
+<div class="body">
+  <app-slider title="Now Playing" [movies]="nowPlaying" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="Popular on Netflix" [movies]="popular" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="Top Rated" [movies]="topRated" [sliderConfig]="sliderConfig"></app-slider>
+  <app-slider title="Upcoming Movies" [movies]="upcoming" [sliderConfig]="sliderConfig"></app-slider>
+</div>
+
+</div>
