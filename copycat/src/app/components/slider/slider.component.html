@@ -2,12 +2,10 @@
 <div class="movie">
   <div class="movie-images">
     <div class="thumbnails">
-      <ngx-slick-carousel config="sliderConfig" class="carousel">
-        <div class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+      <ngx-slick-carousel [config]="sliderConfig" class="carousel">
         <div class="slick-item" ngxSlickItem *ngFor="let movies of movies.results">
           <img src="https://image.tmdb.org/t/p/w200/{{movies.poster_path}}" alt="{{movies.title}}">
         </div>
-        <div class="slick-next"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
       </ngx-slick-carousel>
     </div>
   </div>

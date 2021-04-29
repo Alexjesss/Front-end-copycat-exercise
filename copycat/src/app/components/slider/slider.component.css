@@ -5,6 +5,14 @@
   margin-top: 74px;
 }
 
+img {
+  border-radius: 5px;
+}
+
+.movie {
+  margin: 20px 20px;
+}
+
 .slick-item {
   transition: all 0.3s ease;
   z-index: 10;
