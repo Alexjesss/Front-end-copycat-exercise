@@ -34,11 +34,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subs.map(s => s.unsubscribe());
   }
 
-   @HostListener('window:scroll', [])
+   @HostListener('document:scroll')
    // tslint:disable-next-line:typedef
    onWindowScroll(){
-    const windowScroll = window.pageYOffset;
-    if (windowScroll > this.header.nativeElement.offsetHeight){
+    if (document.body.scrollTop > 5 || document.documentElement.offsetHeight){
       this.sticky = true;
     }
     else {
