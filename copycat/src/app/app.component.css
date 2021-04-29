@@ -28,19 +28,10 @@ p {
 .header {
   position: relative;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  right: 0;
   height: 68px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-  transition-timing-function: ease-in;
-  background-color: #141414;
-  color: white;
-  font-weight: 600;
+  justify-content: space-between;
 }
 
 .header-main {
@@ -53,11 +44,6 @@ p {
   top: 0;
   transition: all 0.3s;
   transition-timing-function: ease-in;
-}
-
-#stickyHeader {
-  background-color: #141414;
-  z-index: 1;
 }
 
 .header-banner {
@@ -74,9 +60,14 @@ p {
 }
 
 h2 {
-  font-size: 20px;
-  margin: 8px 0 6px 3px;
+  font-size: 32px;
+  margin: -214px 0 6px 42px;
   color: lightgrey;
+}
+
+.sticky {
+  background-color: #141414;
+  z-index: 100;
 }
 
 .logo {
@@ -174,24 +165,24 @@ button {
   background-size: cover;
   left: 0;
   right: 0;
-  top: -31px;
   bottom: 0;
+  top: -49px;
   width: 100%;
   opacity: 1;
- transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s;
+  transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s;
   z-index: -1;
 }
 
 .info {
-display: flex;
-padding-left: 2rem;
-padding-right: 2.4rem;
-background-color: #6d6d6eb3;
-color: white;
-appearance: none;
-border: 0;
-border-radius: 4px;
-cursor: pointer;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  background-color: #6d6d6eb3;
+  color: white;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .info-icon{
@@ -199,33 +190,33 @@ cursor: pointer;
 }
 
 .info:hover {
-background-color: #6d6d6e66;
+  background-color: #6d6d6e66;
 }
 
 
 .play {
-background-color: white;
-color: black;
-display: flex;
-padding-left: 2rem;
-padding-right: 2.4rem;
-appearance: none;
-border: 0;
-border-radius: 4px;
-cursor: pointer;
+  background-color: white;
+  color: black;
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .play:hover {
-background-color: #ffffffbf;
+  background-color: #ffffffbf;
 }
 
 button span {
-display: block;
-font-size: 20px;
-font-weight: bold;
-line-height: 2.4rem;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2.4rem;
 }
 
 .arrow {
-transform: scale(3,2);
+  transform: scale(3,2);
 }

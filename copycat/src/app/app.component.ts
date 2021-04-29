@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
     autoplay: false
   };
 
-  @ViewChild('stickyHeader') header: ElementRef;
+  @ViewChild('stickHeader') header: ElementRef;
 
   constructor(private movie: MovieService) {
   }
@@ -34,10 +34,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subs.map(s => s.unsubscribe());
   }
 
-   @HostListener('document:scroll')
+   @HostListener('document:scroll', ['$event'])
    // tslint:disable-next-line:typedef
    onWindowScroll(){
-    if (document.body.scrollTop > 5 || document.documentElement.offsetHeight){
+    const windowScroll = window.pageYOffset;
+
+    if (windowScroll > this.header.nativeElement.offsetHeight){
       this.sticky = true;
     }
     else {
